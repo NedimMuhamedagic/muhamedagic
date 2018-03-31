@@ -146,9 +146,9 @@ module.exports = {
             options: {
               plugins: [
                 ['module-resolver', {
-                  'root': ['./src'],
+                  'root': ['./src/**'],
                   'alias': {
-                    'test': './test',
+                    'strings': './src/constants/strings',
                   },
                 }],
               ],
