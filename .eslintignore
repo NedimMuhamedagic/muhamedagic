@@ -2,4 +2,6 @@ tmp/**
 lib/**
 flow-typed/**
 node_modules/**
-ios/**
+scripts/**
+
+src/registerServiceWorker.js

@@ -1,8 +1,9 @@
 {
-  "presets": ["env", "flow"],
+  "presets": ["react", "env", "flow"],
   "plugins": [
     ["module-resolver", {
-      "root": ["./src/**"],
+      "root": ["./src"],
       }]
     ]
+
 }
