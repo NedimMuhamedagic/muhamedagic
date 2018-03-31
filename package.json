@@ -15,6 +15,10 @@
     "reselect": "^3.0.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
     "flow-bin": "^0.69.0"
   },
   "scripts": {
