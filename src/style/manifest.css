@@ -41,6 +41,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+#colorAlt,
+.colorAlt {
+  color: #EA1C31; }
+
+#colorMain,
+.colorMain {
+  color: #801CA2; }
+
+#colorAccent,
+.colorAccent {
+  color: #50B0A6; }
+
 body {
   font-family: 'Raleway', sans-serif; }
 
@@ -60,21 +72,50 @@ h4 {
   font-weight: 900;
   font-size: 1.4rem; }
 
-#extra {
+#extra, .IntroBox__heading {
   font-size: 3rem;
   font-weight: 900; }
+
+body {
+  background: #FEFBF7; }
+
+img {
+  max-width: 100%; }
+
+#flexcenter, .IntroBox__me {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .Home {
   display: flex;
   flex-direction: row;
   height: 100vh; }
   .Home__intro {
-    flex: 3;
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: flex=flex-start;
     justify-content: flex-end;
-    background: red;
-    padding: 20px; }
+    padding: 40px; }
   .Home__main {
-    flex: 8; }
+    width: 75%; }
+
+.IntroBox__me {
+  margin-bottom: 20px; }
+  .IntroBox__me img {
+    max-width: 70%;
+    border-radius: 50%; }
+
+.IntroBox__heading {
+  margin-bottom: 5px; }
+
+.IntroBox__subheading {
+  margin-bottom: 20px; }
+
+.IntroBox h4 {
+  margin-bottom: 10px; }
+
+.IntroBox ul li {
+  color: #50B0A6;
+  margin-bottom: 5px; }

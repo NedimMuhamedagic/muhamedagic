@@ -1,0 +1,28 @@
+.IntroBox {
+  &__me {
+    @extend #flexcenter;
+    margin-bottom: $mainPadding;
+    img {
+      max-width: 70%;
+      border-radius: 50%;
+    }
+  }
+  &__heading {
+    @extend #extra;
+    margin-bottom: 5px;
+  }
+  &__subheading {
+    margin-bottom: $mainPadding;
+  }
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    li {
+      color: $accent;
+      margin-bottom: 5px;
+    }
+  }
+}
