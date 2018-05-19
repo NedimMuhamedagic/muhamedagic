@@ -1,5 +1,6 @@
 import React from 'react';
 import IntroBox from 'components/IntroBox';
+import Articles from 'components/Articles';
 
 const Home = () => (
   <div className="Home">
@@ -7,7 +8,7 @@ const Home = () => (
       <IntroBox />
     </div>
     <div className="Home__main">
-      <h1>Main</h1>
+      <Articles />
     </div>
   </div>
 );

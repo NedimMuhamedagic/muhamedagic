@@ -1,6 +1,5 @@
 .IntroBox {
   &__me {
-    @extend #flexcenter;
     margin-bottom: $mainPadding;
     img {
       max-width: 70%;
@@ -8,21 +7,21 @@
     }
   }
   &__heading {
-    @extend #extra;
-    margin-bottom: 5px;
+    @extend %extra;
+    margin-bottom: $xSmallMargin;
   }
   &__subheading {
     margin-bottom: $mainPadding;
   }
 
   h4 {
-    margin-bottom: 10px;
+    margin-bottom: $smallMargin;
   }
 
   ul {
     li {
       color: $accent;
-      margin-bottom: 5px;
+      margin-bottom: $xSmallMargin;
     }
   }
 }
