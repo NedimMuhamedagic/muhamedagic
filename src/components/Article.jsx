@@ -18,7 +18,7 @@ const Article = ( { title, headerImg, colorScheme }: ArticlePropTypes ): div => 
           src={ headerImg } />
       </div>
     ) }
-    <p>
+    <p className="justify">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non sollicitudin massa, ut lobortis sem. Aliquam erat volutpat. Mauris rhoncus, tellus vel posuere iaculis, lectus erat vulputate nulla, a sagittis sem risus vitae erat. Donec convallis efficitur urna, et iaculis massa convallis eget. Praesent eget pulvinar erat. Cras pretium, mauris in venenatis ornare, urna ipsum iaculis felis, vel finibus arcu sapien a leo. Phasellus vel blandit justo, nec hendrerit turpis. Fusce imperdiet pulvinar cursus. Ut dapibus, eros commodo pharetra sagittis, augue ante tincidunt odio, non sollicitudin augue augue id purus.
     </p>
     <div className="Article__footer">

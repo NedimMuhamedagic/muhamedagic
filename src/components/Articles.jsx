@@ -1,22 +1,13 @@
 import React, { Component } from 'react';
-import Masonry from 'react-masonry-component';
 import Article from 'components/Article';
-
-const masonryOptions = {
-  transitionDuration: 100,
-};
 
 class Articles extends Component {
   render() {
     return (
-      <Masonry
-        className={ 'Articles' } // default ''
-        disableImagesLoaded={ false } // default 'div'
-        elementType={ 'div' } // default {}
-        options={ masonryOptions } // default false
-        updateOnEachImageLoad={ false }>
+      <div
+        className="Articles">
         { mockArticles.map( article => <Article { ...article } /> )}
-      </Masonry>
+      </div>
     );
   }
 }
