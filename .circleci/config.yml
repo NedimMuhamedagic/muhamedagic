@@ -32,8 +32,8 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-deployment:
-  staging:
-    branch: develop
-    heroku:
-      appname: nmuhamedagic
+  deploy:
+    staging:
+      branch: develop
+      heroku:
+        appname: nmuhamedagic
