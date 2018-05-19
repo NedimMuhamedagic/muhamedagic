@@ -1,0 +1,93 @@
+$colors: (
+  'purple': $main,
+  'red': $alt,
+  'turquoise': $accent,
+  'default': $mainLight,
+);
+
+@function variable_lookup($color) {
+  @return map-get($colors, unquote($color));
+}
+
+@mixin customizeArticleColor($color) {
+  $this: &;
+  &.#{$color} {
+    #{$this}__image {
+      background: variable-lookup($color);
+    }
+
+    h1 {
+      border-top: 2px solid variable-lookup($color);
+    }
+
+    &:hover {
+      h1 {
+        color: variable-lookup($color);
+      }
+      img {
+        opacity: $hoverOpacity;
+      }
+
+      p {
+        color: lighten(variable-lookup($color), 20%);
+      }
+
+      span {
+        color: $grey;
+      }
+    }
+  }
+
+}
+
+.Article {
+  @include customizeArticleColor('purple');
+  @include customizeArticleColor('red');
+  @include customizeArticleColor('turquoise');
+  @include customizeArticleColor('default');
+
+  padding: 0 $mainPadding;
+  margin-bottom: $mainMargin;
+  max-width: 40rem;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  h1 {
+    font-size: $h3;
+    line-height: $h3lh;
+    margin-bottom: $mainPadding;
+    transition: $mainTransition;
+    width: 100%;
+    padding-top: $mainPadding;
+  }
+
+  &__image {
+    margin-bottom: $mainMargin;
+    img {
+      display: block;
+      margin: 0;
+      padding: 0;
+      transition: $mainTransition;
+    }
+  }
+
+  p {
+    color: $grey;
+    margin-bottom: $smallMargin;
+    transition: $mainTransition;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: $mainPadding;
+    &--item {
+      font-size: $fontSmall;
+      transition: $mainTransition;
+    }
+  }
+}
