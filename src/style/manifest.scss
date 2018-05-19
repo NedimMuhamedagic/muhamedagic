@@ -6,9 +6,12 @@
 
 // helpers
 @import 'helpers/flexhelpers';
+@import 'helpers/gridhelpers';
 
 // screens
 @import 'screens/home';
 
 // components
-@import 'components/IntroBox'
+@import 'components/IntroBox';
+@import 'components/Articles';
+@import 'components/Article';

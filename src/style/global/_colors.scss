@@ -8,17 +8,19 @@ $alt: #EA1C31;
 $altLight: #FFD508;
 $accent: #50B0A6;
 
-#colorAlt,
+$grey: #888888;
+
+%colorAlt,
 .colorAlt {
   color: $alt;
 }
 
-#colorMain,
+%colorMain,
 .colorMain {
   color: $main;
 }
 
-#colorAccent,
+%colorAccent,
 .colorAccent {
   color: $accent;
 }
