@@ -1,8 +1,11 @@
 //TODO: [@nmuhamedagic]: load the fonts as assets
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700,700i,900');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i');
 
+$sansSerif: 'Raleway', sans-serif;
+$serif: 'Merriweather', serif;
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: $sansSerif;
 }
 
 h1 {
@@ -23,6 +26,13 @@ h3 {
 h4 {
   font-weight: 900;
   font-size: $h4;
+}
+
+p {
+  font-family: $serif;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  font-size: $fontBody;
 }
 
 %extra {
