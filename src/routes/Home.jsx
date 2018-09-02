@@ -1,16 +1,18 @@
+// @flow
 import React from 'react';
+import { Home, Intro, Main } from 'styled/Home';
 import IntroBox from 'components/IntroBox';
 import Articles from 'components/Articles';
 
-const Home = () => (
-  <div className="Home">
-    <div className="Home__intro">
+const HomeRoute = (): React$Element<typeof Home> => (
+  <Home>
+    <Intro>
       <IntroBox />
-    </div>
-    <div className="Home__main">
+    </Intro>
+    <Main>
       <Articles />
-    </div>
-  </div>
+    </Main>
+  </Home>
 );
 
-export default Home;
+export default HomeRoute;

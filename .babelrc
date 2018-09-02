@@ -1,9 +1,16 @@
 {
-  "presets": ["react", "env", "flow"],
+  "presets": [
+    "@babel/preset-env",
+    "@babel/react",
+    "@babel/flow"
+  ],
   "plugins": [
     ["module-resolver", {
       "root": ["./src"],
-      }]
-    ]
-
+      "alias": {
+        "strings": "./src/constants/strings"
+      }
+    }],
+    "transform-object-rest-spread"
+  ]
 }

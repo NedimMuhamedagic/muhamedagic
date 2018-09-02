@@ -1,32 +1,42 @@
 // @flow
 import React from 'react';
 import { generateAlt } from 'utils/strings';
+import { Article, ArticleImage, ArticleTitle } from 'styled/article';
+import P from 'styled';
 
-type ArticlePropTypes = {
-  title: String,
-  headerImg?: String,
-  colorScheme?: String
+export type ArticleComponentProps = {
+  title: string,
+  headerImg?: string,
+  colorScheme?: string
 };
 
-const Article = ( { title, headerImg, colorScheme }: ArticlePropTypes ): div => (
-  <div className={ `Article ${ colorScheme || 'default' }` }>
-    <h1>{title}</h1>
+const ArticleComponent = ({ title, headerImg, colorScheme = 'default' }: ArticleComponentProps): React$Element<typeof Article> => (
+  <Article colorScheme={colorScheme}>
+    <ArticleTitle colorScheme={colorScheme}>{title}</ArticleTitle>
     { headerImg && (
-      <div className="Article__image">
-        <img
-          alt={ generateAlt(title) }
-          src={ headerImg } />
-      </div>
+      <ArticleImage
+        alt={generateAlt(title)}
+        src={headerImg}
+      />
     ) }
-    <p className="justify">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non sollicitudin massa, ut lobortis sem. Aliquam erat volutpat. Mauris rhoncus, tellus vel posuere iaculis, lectus erat vulputate nulla, a sagittis sem risus vitae erat. Donec convallis efficitur urna, et iaculis massa convallis eget. Praesent eget pulvinar erat. Cras pretium, mauris in venenatis ornare, urna ipsum iaculis felis, vel finibus arcu sapien a leo. Phasellus vel blandit justo, nec hendrerit turpis. Fusce imperdiet pulvinar cursus. Ut dapibus, eros commodo pharetra sagittis, augue ante tincidunt odio, non sollicitudin augue augue id purus.
-    </p>
+    <P
+      justify
+      color="main"
+      marginBottom="small"
+    >
+      Lorem ipsum dolor sit amet.
+    </P>
     <div className="Article__footer">
-      <span className="Article__footer--item">
+      <P size="small" color="grey">
         16:00 Apr 05, 2018.
-      </span>
+      </P>
     </div>
-  </div>
+  </Article>
 );
 
-export default Article;
+ArticleComponent.defaultProps = {
+  headerImg: undefined,
+  colorScheme: undefined,
+};
+
+export default ArticleComponent;
